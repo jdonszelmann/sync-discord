@@ -6,7 +6,7 @@ with open('requirements.txt') as f:
   requirements = f.read().splitlines()
 
 version = ''
-with open('discord/__init__.py') as f:
+with open('syncdiscord/__init__.py') as f:
     version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', f.read(), re.MULTILINE).group(1)
 
 if not version:
@@ -42,7 +42,7 @@ extras_require = {
     ]
 }
 
-setup(name='discord.py',
+setup(name='syncdiscord.py',
       author='Rapptz',
       url='https://github.com/Rapptz/discord.py',
       project_urls={
@@ -50,7 +50,7 @@ setup(name='discord.py',
         "Issue tracker": "https://github.com/Rapptz/discord.py/issues",
       },
       version=version,
-      packages=['discord', 'discord.ext.commands', 'discord.ext.tasks'],
+      packages=['syncdiscord', 'syncdiscord.ext.commands', 'syncdiscord.ext.tasks'],
       license='MIT',
       description='A Python wrapper for the Discord API',
       long_description=readme,
